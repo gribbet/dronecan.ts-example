@@ -1,0 +1,14 @@
+{
+  "name": "dronecan.ts-example",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "dronecan.ts": "^0.8.0",
+    "socketcan": "^4.0.4"
+  }
+}
