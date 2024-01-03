@@ -89,12 +89,10 @@ async function* reader() {
 }
 const read = reader();
 
-const write = async ({ id, data }: CanPayload) =>
+const write = ({ id, data }: CanPayload) =>
   channel.send({ id, data: Buffer.from(data), ext: false, rtr: false });
 
-const destroy = () => {};
-
-const dronecan = createDronecan({ read, write, destroy }, schema, nodeId);
+const dronecan = createDronecan({ read, write }, schema, nodeId);
 
 const start = Date.now();
 const nodeStatus: () => Message<
